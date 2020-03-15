@@ -1,0 +1,197 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(
+    Halaman()
+  );
+}
+
+class Halaman extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        backgroundColor: Colors.blueGrey,
+        appBar: AppBar(
+          title: Text(
+            'Profil',
+            style: TextStyle(
+              fontSize: 30,
+              color: Colors.black,
+            ),
+          ),
+          centerTitle: true,
+          backgroundColor: Colors.blueAccent,
+        ),
+        body: Center(
+          child: Container(
+            child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              ClipRRect(
+                borderRadius: BorderRadius.circular(100),
+                child: 
+                Image(image:AssetImage('img/agus.png'),
+                  width: 200,
+                  height: 200,
+                  fit: BoxFit.cover,
+                ),
+              ),
+              Padding(padding: EdgeInsets.only(top:30)),
+              Text('Kadek Agus Risda Sanjaya', style: TextStyle(fontSize: 20, color: Colors.black,)),
+              Text('https://agusrisda79.blogspot.com', style: TextStyle(fontSize:15, color: Colors.black,fontStyle: FontStyle.italic)),
+              Padding(padding: EdgeInsets.only(bottom: 30)),
+
+              Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,children: 
+             <Widget>[
+                Column(children: <Widget>[
+                  Container(
+                    width: 125,
+                    height: 100,
+                    decoration: BoxDecoration(borderRadius: BorderRadius.only(topLeft: Radius.circular(20), topRight: Radius.circular(20)),
+                      border: Border.all(
+                        width: 3,
+                        color: Colors.lightBlue
+                      ),
+                    ),
+                    child: Column(
+                      children: <Widget> [
+                        Container(margin: EdgeInsets.only(top: 8),
+                        ),
+                        Icon(Icons.gps_fixed,
+                          color: Colors.green,
+                          size: 50,
+                        ),
+                        Container(
+                          child: Center(
+                            child: Text('Singaraja', style: TextStyle(fontSize: 15, color: Colors.white),),
+                          ),
+                          margin: EdgeInsets.only(top: 15),
+                          width: 125,
+                          color: Colors.indigo,
+                        )
+                      ],
+                    ),
+                  ),
+                ],
+                ),
+                Column(
+                  children: <Widget>[
+                    Container(
+                      width: 125,
+                      height: 100,
+                      decoration: BoxDecoration(borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(20),
+                        topRight: Radius.circular(20)
+                      ),
+                        border: Border.all(
+                          width: 3,
+                          color: Colors.lightBlue,
+                        )
+                      ),
+                      child: Column(
+                        children: <Widget>[
+                          Container(margin: EdgeInsets.only(top: 8),),
+                          Icon(
+                            Icons.store,
+                            color: Colors.orange,
+                            size: 50,
+                          ),
+                          Container(
+                            child: Center(
+                              child: Text('Karangasem', style: TextStyle(fontSize: 15, color: Colors.white),
+                            ),
+                          ),
+                          margin: EdgeInsets.only(top: 15),
+                          width: 125,
+                          color: Colors.indigo,
+                        )
+                      ],
+                    ),
+                  )
+                ],
+              )
+            ]
+            ),
+            Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,children: <Widget>[
+              Column(children: <Widget>[
+                Container(
+                  margin: EdgeInsets.only(top: 10),
+                  width: 125,
+                  height: 100,
+                  decoration: BoxDecoration(borderRadius: BorderRadius.only(topLeft: Radius.circular(20), topRight: Radius.circular(20)),
+                    border: Border.all(
+                      width: 3,
+                      color: Colors.lightBlue
+                    ),
+                  ),
+                  child: Column(
+                    children: <Widget>[
+                      Container(margin: EdgeInsets.only(top: 8),
+                      ),
+                      Icon(Icons.music_note,
+                        color: Colors.purple,
+                        size: 50,
+                      ),
+                      Container(
+                        child: Center(
+                          child: Text('Metal', style: TextStyle(fontSize: 15, color: Colors.white),),
+                        ),
+                        margin: EdgeInsets.only(top: 15),
+                        width: 125,
+                        color: Colors.indigo,
+                      )
+                    ],
+                  ),
+                ),
+              ],
+              ),
+              Column(
+                children: <Widget>[
+                  Container(
+                    margin: EdgeInsets.only(top :10),
+                    width: 125,
+                    height: 100,
+                    decoration: BoxDecoration(borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(20),
+                        topRight: Radius.circular(20)
+                    ),
+                        border: Border.all(
+                          width: 3,
+                          color: Colors.lightBlue,
+                        )
+                    ),
+                    child: Column(
+                      children: <Widget>[
+                        Container(margin: EdgeInsets.only(top: 8),),
+                        Icon(
+                          Icons.business,
+                          color: Colors.lightBlueAccent,
+                          size: 50,
+                        ),
+                        Container(
+                          child: Center(
+                            child: Text('Undiksha', style: TextStyle(fontSize: 15, color: Colors.white),
+                            ),
+                          ),
+                          margin: EdgeInsets.only(top: 15),
+                          width: 125,
+                          color: Colors.indigo,
+                        )
+                      ],
+                    ),
+                  )
+                ],
+              )
+            ]
+            ),
+          ],
+        ),
+       ),
+      ),
+     ),  
+    );   
+  }
+}
+
